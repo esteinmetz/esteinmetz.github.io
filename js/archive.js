@@ -4,7 +4,7 @@ window.onload = function() {
 
     var images = document.getElementById("imageArchive");
     
-    var figure, img, figcaption;
+    var figure, img, figcaption, a;
     for(var i = 1; i <= getMaxPages(); i++) {
         figure = document.createElement("figure");
         figure.className = "figure";
@@ -18,7 +18,12 @@ window.onload = function() {
 
         figcaption = document.createElement("figcaption");
         figcaption.className="figure-caption";
-        figcaption.innerHTML = imgHeaders[i];
+//        figcaption.innerHTML = imgHeaders[i];
+
+        a = document.createElement("a");
+        a.href = "index.html?p="+i;
+        a.innerHTML = imgHeaders[i];
+        figcaption.appendChild(a);
         figure.appendChild(figcaption);
 
         images.appendChild(figure);
