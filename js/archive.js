@@ -3,7 +3,7 @@ window.onload = function() {
     var images = document.getElementById("imageArchive");
     
     var figure, img, figcaption;
-    for(var i = 0; i < getMaxPages(); i++) {
+    for(var i = 1; i < getMaxPages(); i++) {
         figure = document.createElement("figure");
         figure.className = "figure";
 
