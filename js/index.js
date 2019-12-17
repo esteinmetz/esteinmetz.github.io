@@ -7,7 +7,7 @@ window.onload = function() {
     if(!pg) pg=1;
     document.getElementById('imgComic').src='res/img/' +pg+ '.gif';
     document.getElementById('imgComic').alt='image' + pg;
-    document.getElementById(txtAdvance).innerText = imgHeaders[pg];
+    document.getElementById('txtAdvance').innerText = imgHeaders[pg];
     $('#txtComic').load('res/txt/' +pg+ '.txt');
     document.getElementById('navPrevious').href='index.html?p=' +(pg-1);
     document.getElementById('navAdvance').href=document.getElementById('navNext').href='index.html?p=' +(pg<last?pg+1:pg);
