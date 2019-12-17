@@ -16,8 +16,7 @@ window.onload = function() {
 
         figcaption = document.createElement("figcaption");
         figcaption.className="figure-caption";
-        figcaption.id = "cap"+i;
-        figcaption.load('res/hdr/' +i+ '.txt');
+        figcaption.innerHTML = imgHeaders[i];
         figure.appendChild(figcaption);
 
         images.appendChild(figure);

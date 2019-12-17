@@ -5,6 +5,9 @@
  * -add footer (dynamic)
  */
 /* Tools */
+const imgHeaders = [ '', 'first', 
+    'second' 
+];
 function getMaxPages() {
     return 2;
 }
