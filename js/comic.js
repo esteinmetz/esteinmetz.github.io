@@ -24,6 +24,7 @@ function getUrlParam(parameter, defaultvalue) {
     return urlparameter;
 }
 
+//This is Erik trying to get the max page dynamically calculated.
 function test() {
     var num=0;
     /*
@@ -66,4 +67,44 @@ alert('I got here');
 */
 
     return num;
+}
+
+/* Triggers */
+function addHeaderFooter() {
+    /* Navbar */
+    var nav = document.getElementById("navbarSupportedContent");
+    var ul = document.createElement("ul");
+    ul.className = "navbar-nav mr-auto";
+
+    var navItems = [
+        {href: "index.html", txt: "Home"},
+        {href: "about.html", txt: "About"},
+        {href: "archive.html", txt: "Archive"},
+        {href: "news.html", txt: "News"},
+        {href: "contact.html", txt: "Contact"}
+    ];
+
+    //Home
+    var li, a;
+    for(var i = 0; i < navItems.length; i++) {
+        li = document.createElement("li");
+        li.className = "nav-item";
+        a = document.createElement("a");
+        a.className = "nav-link";
+        a.href = navItems[i].href;
+        a.innerText = navItems[i].txt;
+        li.appendChild(a);
+
+        ul.appendChild(li);
+    }
+    nav.appendChild(ul);
+
+    /* Footer */
+    var footer = document.createElement("footer");
+    footer.className = "static-bottom bg-secondary";
+    var div = document.createElement("div");
+    div.className = "text-center";
+    div.innerText = "Copyright 2019 Handsome Quest"
+    footer.appendChild(div);
+    document.body.appendChild(footer);
 }
