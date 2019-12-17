@@ -3,14 +3,16 @@
  * -max page (dynamic)
  * -add navbar (dynamic)
  * -add footer (dynamic)
+ * -make imgHeaders more dynamic (instead of array)
  */
 /* Tools */
-const imgHeaders = [ '', 'first', 
-    'second' 
-];
 function getMaxPages() {
     return 2;
 }
+const imgHeaders = [ '', 
+    'first', 
+    'second' 
+];
 
 function getUrlVars() {
     var vars = {};

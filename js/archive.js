@@ -1,9 +1,11 @@
 /* Triggers */
 window.onload = function() {
+    this.addHeaderFooter();
+
     var images = document.getElementById("imageArchive");
     
     var figure, img, figcaption;
-    for(var i = 1; i < getMaxPages(); i++) {
+    for(var i = 1; i <= getMaxPages(); i++) {
         figure = document.createElement("figure");
         figure.className = "figure";
 
@@ -21,6 +23,4 @@ window.onload = function() {
 
         images.appendChild(figure);
     }
-
-    this.addHeaderFooter();
 }

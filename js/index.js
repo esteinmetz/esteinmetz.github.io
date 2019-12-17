@@ -1,5 +1,7 @@
 /* Triggers */
 window.onload = function() {
+    this.addHeaderFooter();
+
     var last=getMaxPages();
     var pg = parseInt(getUrlParam('p', 1));
     if(!pg) pg=1;
@@ -12,5 +14,4 @@ window.onload = function() {
     document.getElementById('navLast').href='index.html?p=' +last;
 
 //    test();
-    this.addHeaderFooter();
 }
