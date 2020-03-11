@@ -10,7 +10,7 @@ function getMaxPages() {
     return 2;
 }
 const imgHeaders = [ '', 
-    'first', 
+    'Handsome Quest Begins', 
     'second' 
 ];
 
