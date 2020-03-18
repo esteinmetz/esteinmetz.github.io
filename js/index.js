@@ -10,7 +10,11 @@ window.onload = function() {
 
     document.getElementById('imgComic').src='res/img/' +pg+ '.gif';
     document.getElementById('imgComic').alt='image' + pg;
-    document.getElementById('txtAdvance').innerText = imgHeaders[pg];
+    //TODO: make sure this loads the NEXT title.
+    if(pg < imgHeaders.length)
+        document.getElementById('txtAdvance').innerText = imgHeaders[pg+1];
+    else
+        document.getElementById('txtAdvance').innerText = '';
     $('#txtComic').load('res/txt/' +pg+ '.txt');
     document.getElementById('navPrevious').href='index.html?p=' +(pg-1);
     document.getElementById('navAdvance').href=document.getElementById('navNext').href='index.html?p=' +(pg<last?pg+1:pg);
