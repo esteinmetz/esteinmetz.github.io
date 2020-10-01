@@ -1,13 +1,12 @@
 /*
  *@todo:
- * -max page (dynamic)
  * -add navbar (dynamic)
  * -add footer (dynamic)
  * -make imgHeaders more dynamic (instead of array)
  */
 /* Tools */
 function getMaxPages() {
-    return 109;
+    return imgHeaders.length-1;
 }
 const imgHeaders = [ '', 
 'Inspect the door', 
@@ -124,51 +123,6 @@ function getUrlParam(parameter, defaultvalue) {
     return urlparameter;
 }
 
-//This is Erik trying to get the max page dynamically calculated.
-function test() {
-    var num=0;
-    /*
-    $.ajax({url: "127.0.0.1:5500/Dan%20(NC)/res/img"})
-    .done(function( data ) {      
-        $(data).find("tbody tr a").each(function(i) {
-//            if(i>=4) 
-            num=num++;
-        });
-    })
-    */
-
-//   alert($('#txtTest').load('res/txt/').toString());
-
-/*
-alert('I got here');
-    $.ajax({
-        url: "res/img/",
-        success: function(data) {
-            var parser = new DOMParser(),
-                doc = parser.parseFromString(data, 'text/html');
-
-            //output the file table
-//            $("#files").append(doc.querySelector('table').outerHTML);
-
-            //or return the number of files
-            //tr = icon, filename, date, size, desc
-            //consider all rows with a size value holding a number as a vlid file
-            var fileCount = 0,
-                rows = doc.querySelector('table').querySelectorAll('tr');
-
-            for (var i=0;i<rows.length;i++) {
-                if (rows[i].children[3]) {
-                    if (parseInt(rows[i].children[3].innerText)>0) fileCount++;         
-                }
-            }
-            $("#txtTest").text(fileCount+' files');
-        }
-    });
-*/
-
-    return num;
-}
-
 /* Triggers */
 function addHeaderFooter() {
     /* Navbar */
@@ -180,8 +134,7 @@ function addHeaderFooter() {
         {href: "index.html", txt: "Home"},
         {href: "about.html", txt: "About"},
         {href: "archive.html", txt: "Archive"},
-        {href: "news.html", txt: "News"},
-        {href: "contact.html", txt: "Contact"}
+        {href: "news.html", txt: "News"}
     ];
 
     //Home
