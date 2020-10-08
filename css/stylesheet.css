@@ -1,3 +1,26 @@
+a.disabled {
+    color: gray;
+    pointer-events: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+hr {
+    border-width: 2px;
+    border-color: darkgray;
+}
+
+.container_news {
+    background: #f1f1f1;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
 .figcaption {
     color: black;
 }

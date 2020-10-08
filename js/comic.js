@@ -1,13 +1,3 @@
-/*
- *@todo:
- * -add navbar (dynamic)
- * -add footer (dynamic)
- * -make imgHeaders more dynamic (instead of array)
- */
-/* Tools */
-function getMaxPages() {
-    return imgHeaders.length-1;
-}
 const imgHeaders = [ '', 
 'Inspect the door', 
  'Is it a door?  Does it have a frame?',
@@ -160,4 +150,9 @@ function addHeaderFooter() {
     div.innerText = "Copyright 2019 Handsome Quest"
     footer.appendChild(div);
     document.body.appendChild(footer);
+}
+
+/* Tools */
+function getMaxPages() {
+    return imgHeaders.length-1;
 }
