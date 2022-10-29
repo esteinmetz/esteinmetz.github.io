@@ -24,11 +24,16 @@ window.onload = function() {
     }
     $.get('res/txt/' +page+ '/' +pg+ '.txt', function(data){
         var textLines = data.split('\n');
+        var para = document.createElement("p");
+        para.style = "text-align:left;";
         textLines.forEach(e => {
-            $('#txtComic').append("<p "
-                + (nameFormats[e.split(':')[0]] ? "style='text-align:left;color:" +nameFormats[e.split(':')[0]]: "")
-                + "'>"+e+"</p>");
+            var span = document.createElement("span");
+            span.innerHTML = e;
+            if(nameFormats[e.split(':')[0]])
+                span.style = "color:" + nameFormats[e.split(':')[0]];
+            para.append(span);
         });
+        $('#txtComic').append(para);
     })
     document.getElementById('navPrevious').href=getURLNoParam() +'?p='+ (pg-1);
     document.getElementById('navAdvance').href=document.getElementById('navNext').href=getURLNoParam() +'?p=' +(pg<last?pg+1:pg);
