@@ -1,11 +1,3 @@
-//This is the line # from comic.js - 1
-// So arc 1 ends at "Inspect removed branch."
-var storyPanels = [{lastPage: 0}, 
-    {lastPage: 10, title: 'test'},
-    {lastPage: 30, title: 'test2'},
-    {lastPage: 60, title: 'test3'},
-];
-
 /* Triggers */
 window.onload = function() {
     this.addHeaderFooter();
@@ -24,12 +16,12 @@ window.onload = function() {
 
         a = document.createElement("a");
         a.className = "figcaption";
-        a.href = "index.html?p="+i;
+        a.href = '../' +page+ ".html?p="+i;
 
         img = document.createElement("img");
         img.className = "img-thumbnail";
         img.height = img.width = "100";
-        img.src = "res/img/"+i+".gif";
+        img.src = "../res/img/"+page+ '/' +i+".gif";
         img.alt = "image"+i;
 
         a.appendChild(img);
@@ -52,8 +44,8 @@ window.onload = function() {
         $('#navNext, #navLast, #navAdvance').addClass('disabled');
         document.getElementById('txtAdvance').innerText = '';
     }
-    $('#navPrevious').attr('href', 'archive.html?p=' +(pg-1));
-    $('#navNext').attr('href', 'archive.html?p=' +(pg<lastArc?pg+1:pg));
-    $('#navAdvance').attr('href', 'archive.html?p=' +(pg<lastArc?pg+1:pg));
-    $('#navLast').attr('href', 'archive.html?p=' +lastArc);
+    $('#navPrevious').attr('href', 'archive/' +page+ '.html?p=' +(pg-1));
+    $('#navNext').attr('href', 'archive/' +page+ '.html?p=' +(pg<lastArc?pg+1:pg));
+    $('#navAdvance').attr('href', 'archive/' +page+ '.html?p=' +(pg<lastArc?pg+1:pg));
+    $('#navLast').attr('href', 'archive/' +page+ '.html?p=' +lastArc);
 }

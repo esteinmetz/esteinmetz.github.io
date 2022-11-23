@@ -21,8 +21,17 @@ hr {
     margin-top: 10px;
 }
 
+.container_index {
+    justify-content: space-around;
+}
+
 .figcaption {
     color: black;
+}
+
+.storyThumbnail {
+    max-width: 200px;
+    word-wrap: break-word;
 }
 
 .thumbnail {
