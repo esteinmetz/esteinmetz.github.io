@@ -6,12 +6,12 @@ function addHeaderFooter() {
     ul.className = "navbar-nav mr-auto";
 
     var navItems = [
-        {href: "index.html", txt: "Home"},
-        {href: "handsomequest.html", txt: "~Handsome Quest~"},
-        {href: "#", txt: "~-Coming Soon-~"},
-        {href: "about.html", txt: "About"},
-        {href: "archive/HandsomeQuest.html", txt: "Archive"},
-        {href: "news.html", txt: "News"}
+        {href: "/index.html", txt: "Home"},
+        {href: "/HandsomeQuest.html", txt: "~Handsome Quest~"},
+        {href: "/Undefined.html", txt: "~Undefined~"},
+        {href: "/about.html", txt: "About"},
+        {href: "/archive/HandsomeQuest.html", txt: "Archive"},
+        {href: "https://bsky.app/profile/dannybones.bsky.social", txt: "News"}
     ];
 
     //Home

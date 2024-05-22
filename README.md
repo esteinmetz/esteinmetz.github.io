@@ -14,7 +14,7 @@ To add a new story arc (for the archive pagination):
 
 To add a new line highlight
 
-1. Add new row to setupSTORY_PAGE.js in format ` 'Name to Search For': 'color',`  Color should use any css color code (tested with words like 'red' and hexcodes like '#34eb46').
+1. Add new row to setupSTORY_PAGE.js in format `'Name to Search For': 'color',`  Color should use any css color code (tested with words like 'red' and hexcodes like '#34eb46').
 
 To change the thumbnail of a story on the main page.
 
@@ -29,3 +29,15 @@ After any change:
 Tips for work:
 
 1. VSCode I highly recommend the "Live Server" extension.  You can test changes live and locally directly from VSCode instead of needing the `firebase serve --only hosting`
+
+To Fix:
+- [x] navbar needs a preceding '/'
+- [x] archive links need the '/' too (next/first/last/etc)
+- [x] update news to https://bsky.app/profile/dannybones.bsky.social
+- [x] Make "About" page under construction.
+- [ ] make sure undefined works too
+- [ ] Archive page
+- [ ] Separate archives: navbar link or selection page.  My choice.  Maybe a selection page and a dropdown link?
+- [ ] Load thumbnails.
+- [ ] add scaling to archives (different by comic)
+- [x] add scaling to main page images (different by comic)

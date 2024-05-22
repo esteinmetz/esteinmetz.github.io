@@ -44,8 +44,8 @@ window.onload = function() {
         $('#navNext, #navLast, #navAdvance').addClass('disabled');
         document.getElementById('txtAdvance').innerText = '';
     }
-    $('#navPrevious').attr('href', 'archive/' +page+ '.html?p=' +(pg-1));
-    $('#navNext').attr('href', 'archive/' +page+ '.html?p=' +(pg<lastArc?pg+1:pg));
-    $('#navAdvance').attr('href', 'archive/' +page+ '.html?p=' +(pg<lastArc?pg+1:pg));
-    $('#navLast').attr('href', 'archive/' +page+ '.html?p=' +lastArc);
+    $('#navPrevious').attr('href', '/archive/' +page+ '.html?p=' +(pg-1));
+    $('#navNext').attr('href', '/archive/' +page+ '.html?p=' +(pg<lastArc?pg+1:pg));
+    $('#navAdvance').attr('href', '/archive/' +page+ '.html?p=' +(pg<lastArc?pg+1:pg));
+    $('#navLast').attr('href', '/archive/' +page+ '.html?p=' +lastArc);
 }
