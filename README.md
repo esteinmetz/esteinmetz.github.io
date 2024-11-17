@@ -21,6 +21,13 @@ To change the thumbnail of a story on the main page.
 1. Add the new image to the base image directory for the story (res/img/HandsomeQuest for the first story).
 1. Goto index.html, and change the appropriate `<img>` tag's file to the new one's name.
 
+Other notes:
+
+1. TODO: for your about page, update as needed...don't add your email directly, add it encoded (instructions in about.js).
+1. For Archive thumbnails, upload a 2nd img in the same location with '-thmb' added (ie page 1 has `1.gif` and `1-thmb.gif`).
+1. For archive image size, open the setup for the story (ie `setupUndefined.js`) and update the first line with the pixel size (`var archiveImageSize = 100` means 100 pixels).
+1. Add your contact info in the about page.  Note, do not directly add your email, instead encode it in about.js
+
 After any change:
 
 1. `firebase serve --only hosting` (to test locally, images may not load)
@@ -29,15 +36,3 @@ After any change:
 Tips for work:
 
 1. VSCode I highly recommend the "Live Server" extension.  You can test changes live and locally directly from VSCode instead of needing the `firebase serve --only hosting`
-
-To Fix:
-- [x] navbar needs a preceding '/'
-- [x] archive links need the '/' too (next/first/last/etc)
-- [x] update news to https://bsky.app/profile/dannybones.bsky.social
-- [x] Make "About" page under construction.
-- [ ] make sure undefined works too
-- [ ] Archive page
-- [ ] Separate archives: navbar link or selection page.  My choice.  Maybe a selection page and a dropdown link?
-- [ ] Load thumbnails.
-- [ ] add scaling to archives (different by comic)
-- [x] add scaling to main page images (different by comic)

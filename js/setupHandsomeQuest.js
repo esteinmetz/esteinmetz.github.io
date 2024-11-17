@@ -1,3 +1,5 @@
+var archiveImageSize = 100;
+
 const imgHeaders = [ '', 
 'Inspect the door', 
  'Is it a door?  Does it have a frame?',

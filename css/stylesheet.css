@@ -26,7 +26,10 @@ hr {
 }
 
 .figcaption {
+    align-items: center;
     color: black;
+    display: flex;
+    flex-direction: column;
 }
 
 .storyThumbnail {
@@ -35,6 +38,5 @@ hr {
 }
 
 .thumbnail {
-    max-width: 125px;
     word-wrap: break-word;
 }
