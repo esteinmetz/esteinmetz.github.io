@@ -1,0 +1,11 @@
+:root {
+    --imgSize: 1;
+}
+
+#imgComic {
+    -moz-transform: scale(var(--imgSize));
+    -ms-transform: scale(var(--imgSize));
+    -o-transform: scale(var(--imgSize));
+    -webkit-transform: scale(var(--imgSize));
+    transform: scale(var(--imgSize));
+}

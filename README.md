@@ -14,12 +14,19 @@ To add a new story arc (for the archive pagination):
 
 To add a new line highlight
 
-1. Add new row to setupSTORY_PAGE.js in format ` 'Name to Search For': 'color',`  Color should use any css color code (tested with words like 'red' and hexcodes like '#34eb46').
+1. Add new row to setupSTORY_PAGE.js in format `'Name to Search For': 'color',`  Color should use any css color code (tested with words like 'red' and hexcodes like '#34eb46').
 
 To change the thumbnail of a story on the main page.
 
 1. Add the new image to the base image directory for the story (res/img/HandsomeQuest for the first story).
 1. Goto index.html, and change the appropriate `<img>` tag's file to the new one's name.
+
+Other notes:
+
+1. TODO: for your about page, update as needed...don't add your email directly, add it encoded (instructions in about.js).
+1. For Archive thumbnails, upload a 2nd img in the same location with '-thmb' added (ie page 1 has `1.gif` and `1-thmb.gif`).
+1. For archive image size, open the setup for the story (ie `setupUndefined.js`) and update the first line with the pixel size (`var archiveImageSize = 100` means 100 pixels).
+1. Add your contact info in the about page.  Note, do not directly add your email, instead encode it in about.js
 
 After any change:
 

@@ -6,12 +6,13 @@ function addHeaderFooter() {
     ul.className = "navbar-nav mr-auto";
 
     var navItems = [
-        {href: "index.html", txt: "Home"},
-        {href: "handsomequest.html", txt: "~Handsome Quest~"},
-        {href: "#", txt: "~-Coming Soon-~"},
-        {href: "about.html", txt: "About"},
-        {href: "archive/HandsomeQuest.html", txt: "Archive"},
-        {href: "news.html", txt: "News"}
+        {href: "/index.html", txt: "Home"},
+        {href: "/HandsomeQuest.html", txt: "~Handsome Quest~", style: "border-style:hidden hidden hidden solid"},
+        {href: "/archive/HandsomeQuest.html", txt: "Archive", style: "border-style:hidden solid hidden hidden"},
+        {href: "/Undefined.html", txt: "~Undefined~"},
+        {href: "/archive/Undefined.html", txt: "Archive", style: "border-style:hidden solid hidden hidden"},
+        {href: "/about.html", txt: "About"},
+        {href: "https://bsky.app/profile/dannybones.bsky.social", txt: "News"}
     ];
 
     //Home
@@ -23,6 +24,7 @@ function addHeaderFooter() {
         a.className = "nav-link";
         a.href = navItems[i].href;
         a.innerText = navItems[i].txt;
+        a.style = navItems[i].style;
         li.appendChild(a);
 
         ul.appendChild(li);
@@ -62,4 +64,3 @@ function getUrlParam(parameter, defaultvalue) {
 function getURLNoParam() {
     return window.location.href.split('?')[0];
 }
-

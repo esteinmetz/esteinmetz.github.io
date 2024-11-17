@@ -7,12 +7,12 @@ window.onload = function() {
     var lastArc=storyPanels.length-1;
     var pg = parseInt(getUrlParam('p', 1));
     if(!pg) pg=1;
-    console.log(pg)
     
     var div, figure, img, figcaption, a, span;
     for(var i = storyPanels[pg-1].lastPage+1; i <= storyPanels[pg].lastPage; i++) {
         div = document.createElement("div");
         div.className = "thumbnail";
+        div.style = `width: ${archiveImageSize+25}px`;
 
         a = document.createElement("a");
         a.className = "figcaption";
@@ -20,8 +20,13 @@ window.onload = function() {
 
         img = document.createElement("img");
         img.className = "img-thumbnail";
-        img.height = img.width = "100";
-        img.src = "../res/img/"+page+ '/' +i+".gif";
+        img.height = img.width = archiveImageSize;
+        img.src = "../res/img/"+page+ '/' +i+"-thmb.gif";
+        img.alt = "image"+i;
+        img.onerror = function() {
+            this.onerror = null;
+            this.src = this.src.replace("-thmb","")
+        };
         img.alt = "image"+i;
 
         a.appendChild(img);
@@ -44,8 +49,8 @@ window.onload = function() {
         $('#navNext, #navLast, #navAdvance').addClass('disabled');
         document.getElementById('txtAdvance').innerText = '';
     }
-    $('#navPrevious').attr('href', 'archive/' +page+ '.html?p=' +(pg-1));
-    $('#navNext').attr('href', 'archive/' +page+ '.html?p=' +(pg<lastArc?pg+1:pg));
-    $('#navAdvance').attr('href', 'archive/' +page+ '.html?p=' +(pg<lastArc?pg+1:pg));
-    $('#navLast').attr('href', 'archive/' +page+ '.html?p=' +lastArc);
+    $('#navPrevious').attr('href', '/archive/' +page+ '.html?p=' +(pg-1));
+    $('#navNext').attr('href', '/archive/' +page+ '.html?p=' +(pg<lastArc?pg+1:pg));
+    $('#navAdvance').attr('href', '/archive/' +page+ '.html?p=' +(pg<lastArc?pg+1:pg));
+    $('#navLast').attr('href', '/archive/' +page+ '.html?p=' +lastArc);
 }
